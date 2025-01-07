@@ -43,20 +43,5 @@ Copy code
 # Clone the repository
 git clone <repo-url>
 
-# Navigate to the project folder
-cd <project-folder>
 
-# Install dependencies
-npm install
-
-# Start the server
-npm start
-Contributing
-Fork the repository.
-Create a new branch (git checkout -b feature-name).
-Commit your changes (git commit -am 'Add new feature').
-Push to the branch (git push origin feature-name).
-Create a new Pull Request.
-License
-Include license details if applicable.
 
