@@ -1,91 +1,62 @@
-Express Task Manager
 
-This project demonstrates a simple Express server to manage tasks. It serves a single HTML page and provides RESTful endpoints for task management operations such as adding, editing, deleting, sorting, and filtering tasks.
 
-Features
+# Endpoints
+This project has 7 endpoints:
 
-Task Management: Add, edit, delete tasks efficiently.
+**Add a new task
+GET /tasks/add?taskId=<id>&text=<text>&priority=<priority>
+Adds a new task with a specified task ID, text, and priority.
 
-Sorting and Filtering: Sort tasks by priority or filter them based on specific criteria.
+**Retrieve all tasks
+GET /tasks
+Retrieves a list of all tasks stored in the system.
 
-RESTful API: Interact with the application using well-defined RESTful endpoints.
+**Retrieve tasks sorted by priority (ascending)
+GET /tasks/sort-by-priority
+Retrieves all tasks sorted by their priority in ascending order.
 
-Endpoints
+**Edit a task's priority
+GET /tasks/edit-priority?taskId=<id>&priority=<priority>
+Allows you to update the priority of a specific task by task ID.
 
-Below are the endpoints provided by the server:
+**Edit a task's text
+GET /tasks/edit-text?taskId=<id>&text=<text>
+Allows you to update the text/description of a specific task by task ID.
 
-1. Add a Task to the Task List
+**Delete a task
+GET /tasks/delete?taskId=<id>
+Deletes a task based on the provided task ID.
 
-URL: GET /tasks/add?taskId=2&text=Write%20Tests&priority=1
+**Filter tasks by priority
+GET /tasks/filter-by-priority?priority=<priority>
+Retrieves tasks that match a specified priority.
 
-Description: Adds a new task to the task list with the given taskId, text, and priority.
 
-2. Retrieve All Tasks
 
-URL: GET /tasks
+#Setup Instructions
+Prerequisites
+Node.js installed
+Any other dependencies or tools (e.g., database, environment configurations)
+Installation
+bash
+Copy code
+# Clone the repository
+git clone <repo-url>
 
-Description: Returns all tasks in the task list.
+# Navigate to the project folder
+cd <project-folder>
 
-3. Sort Tasks by Priority
-
-URL: GET /tasks/sort-by-priority
-
-Description: Returns tasks sorted by their priority (ascending order).
-
-4. Edit a Task's Priority
-
-URL: GET /tasks/edit-priority?taskId=2&priority=3
-
-Description: Updates the priority of the task identified by taskId.
-
-5. Edit a Task's Text
-
-URL: GET /tasks/edit-text?taskId=3&text=Updated%20Task%20Text
-
-Description: Updates the description (text) of the task identified by taskId.
-
-6. Delete a Task from the Task List
-
-URL: GET /tasks/delete?taskId=1
-
-Description: Deletes the task identified by taskId from the task list.
-
-7. Filter Tasks by Priority
-
-URL: GET /tasks/filter-by-priority?priority=1
-
-Description: Returns tasks with the specified priority.
-
-How to Run
-
-Clone the repository.
-
-git clone https://github.com/your-username/express-task-manager.git
-
-Navigate to the project directory.
-
-cd express-task-manager
-
-Install dependencies.
-
+# Install dependencies
 npm install
 
-Start the server.
-
+# Start the server
 npm start
-
-Open your browser and access the application at http://localhost:3000.
-
-Dependencies
-
-Express: Backend framework for creating the server.
-
-Node.js: JavaScript runtime.
-
-Contribution
-
-Feel free to fork this repository and submit pull requests. For major changes, please open an issue first to discuss the changes.
-
+Contributing
+Fork the repository.
+Create a new branch (git checkout -b feature-name).
+Commit your changes (git commit -am 'Add new feature').
+Push to the branch (git push origin feature-name).
+Create a new Pull Request.
 License
+Include license details if applicable.
 
-This project is licensed under the MIT License.
